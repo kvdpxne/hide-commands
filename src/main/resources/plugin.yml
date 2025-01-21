@@ -1,0 +1,8 @@
+name: "HideCommands"
+version: "${version}"
+main: "me.kvdpxne.hc.HideCommands"
+api-version: "1.7.10"
+load: "STARTUP"
+authors: [ "kvdpxne" ]
+website: "https://github.com/kvdpxne/hide-commands"
+depend: [ "ProtocolLib" ]
