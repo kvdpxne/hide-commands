@@ -49,8 +49,9 @@ final class YamlDefaultPropertyLoader {
 
     try (final InputStream input = Files.newInputStream(path)) {
       // noinspection unchecked
-      final Map<String, Object> values = (Map<String, Object>) yaml.load(input);
-      response = (String) values.get("messages.unknown-command");
+      response = ((Map<String, String>) ((Map<String, Object>) yaml.load(input))
+        .get("messages"))
+        .get("unknown-command");
     } catch (
       final IOException exception
     ) {
