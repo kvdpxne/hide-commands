@@ -64,25 +64,25 @@ final class ListenerPacketInChat
     }
 
     final Command command = commandMap.getCommand(name);
+    final Player player = event.getPlayer();
+
     if (null == command) {
+      HideCommands.instance()
+        .playerIdentifierManager()
+        .add(player);
       return;
     }
 
-    final Player player = event.getPlayer();
-    // If the player is an administrator then he has privileges to all
-    // commands anyway, so further code execution is unnecessary.
     if (player.isOp()) {
       return;
     }
 
-    // The text equivalent of the privilege to execute the command.
     final String privilege = command.getPermission();
+    if (null == privilege || privilege.isEmpty()) {
+      return;
+    }
 
-    // If the privilege to execute the command is null or is empty then a
-    // player with no privileges has the privilege to use this command.
     if (!player.hasPermission(privilege)) {
-      //
-      //
       HideCommands.instance()
         .playerIdentifierManager()
         .add(player);

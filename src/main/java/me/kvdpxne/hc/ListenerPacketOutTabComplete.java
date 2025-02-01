@@ -53,14 +53,11 @@ final class ListenerPacketOutTabComplete
     }
 
     final Player player = event.getPlayer();
-    // If the player is an administrator then he has privileges to all
-    // commands anyway, so further code execution is unnecessary.
     if (player.isOp()) {
       return;
     }
 
     final SortedSet<String> suggestions = new TreeSet<>();
-
     final CommandMap commandMap = HideCommands.instance()
       .commandMapHolder()
       .commandMap();
@@ -75,11 +72,7 @@ final class ListenerPacketOutTabComplete
         continue;
       }
 
-      // The text equivalent of the privilege to execute the command.
       final String privilege = command.getPermission();
-
-      // If the privilege to execute the command is null or is empty then a
-      // player with no privileges has the privilege to use this command.
       if (null == privilege || privilege.isEmpty() ||
         player.hasPermission(privilege)
       ) {
