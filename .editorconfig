@@ -16,3 +16,6 @@ trim_trailing_whitespace = true
 # Sometimes inserting whitespace at the end of a line in Markdown files is the
 # intended intention and should not be trimmed.
 trim_trailing_whitespace = false
+
+[libraries.versions.toml]
+max_line_length = off

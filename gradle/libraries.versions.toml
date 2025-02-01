@@ -1,14 +1,13 @@
 [versions]
+bukkit = "1.8-R0.1-SNAPSHOT"
 notchity = "development-SNAPSHOT"
-protocollib-v5xx = "5.3.0"
-protocollib-v4xx = "4.8.0"
+shadow = "8.3.5"
 protocollib-legacy = "3.7.0"
-spigot-legacy = "1.7.10-R0.1-SNAPSHOT"
-spigot-v18-oldest = "1.8-R0.1-SNAPSHOT"
-spigot-latest = "1.20.6-R0.1-SNAPSHOT"
+
+[plugins]
+shadow = { id = "com.gradleup.shadow", version.ref = "shadow" }
 
 [libraries]
+bukkit = { module = "org.bukkit:bukkit", version.ref = "bukkit" }
 notchity = { module = "com.github.kvdpxne:notchity", version.ref = "notchity" }
-protocollib-v5xx = { module = "com.comphenix.protocol:ProtocolLib", version.ref = "protocollib-v5xx" }
-protocollib-v4xx = { module = "com.comphenix.protocol:ProtocolLib", version.ref = "protocollib-v4xx" }
 protocollib-legacy = { module = "com.comphenix.protocol:ProtocolLib-Legacy", version.ref = "protocollib-legacy" }
