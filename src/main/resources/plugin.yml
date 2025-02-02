@@ -1,7 +1,6 @@
 name: "HideCommands"
 version: "${version}"
 main: "me.kvdpxne.hc.HideCommands"
-api-version: "1.7"
 load: "STARTUP"
 description: "${description}"
 authors: ["kvdpxne"]
