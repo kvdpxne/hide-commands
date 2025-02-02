@@ -37,36 +37,31 @@ server or not.
 ### Step by step
 
 1. **Download the plugin:**
-
-* Go to the [release](https://github.com/kvdpxne/hide-commands/releases)
-  section on GitHub.
-* Download the latest version of the `.jar` plugin file (
-  e.g. `hide-commands-v0.1.0.jar`)
+   * Go to the [release](https://github.com/kvdpxne/hide-commands/releases)
+     section on GitHub.
+   * Download the latest version of the `.jar` plugin file (
+     e.g. `hide-commands-v0.1.0.jar`)
 
 2. **Prepare the server:**
-
-* Make sure you have a working [Minecraft](https://www.minecraft.net/) game
-  server based on the platform [Bukkit](https://dev.bukkit.org/),
-  [Spigot](https://www.spigotmc.org/) or [Paper](https://papermc.io/)
+   * Make sure you have a working [Minecraft](https://www.minecraft.net/) game
+     server based on the platform [Bukkit](https://dev.bukkit.org/),
+     [Spigot](https://www.spigotmc.org/) or [Paper](https://papermc.io/)
 
 3. **Place the file on the server:**
-
-* Open your [Minecraft](https://www.minecraft.net/) game server directory.
-* Go to the `plugins`[^4] directory.
-* Copy the downloaded `.jar` file to the `plugins`[^4] directory.
+   * Open your [Minecraft](https://www.minecraft.net/) game server directory.
+   * Go to the `plugins`[^4] directory.
+   * Copy the downloaded `.jar` file to the `plugins`[^4] directory.
 
 4. **Start the server:**
-
-* Start or restart the [Minecraft](https://www.minecraft.net/) game server,
-  to load the plugin.
-* Check the server console to make sure the plugin was loaded without errors.
+   * Start or restart the [Minecraft](https://www.minecraft.net/) game server,
+     to load the plugin.
+   * Check the server console to make sure the plugin was loaded without errors.
 
 5. **Configuration (optional):**
-
-* After starting the server, find the `plugins/hide-commands` directory in your
-  server directory.
-* Edit the `settings.properties` configuration file to customize the plugin
-  settings to your individual needs.
+   * After starting the server, find the `plugins/hide-commands` directory in
+     your server directory.
+   * Edit the `settings.properties` configuration file to customize the plugin
+     settings to your individual needs.
 
 ## License
 
