@@ -104,7 +104,6 @@ public final class HideCommands
     }
   }
 
-
   /**
    * @since 0.1.0
    */
@@ -136,20 +135,18 @@ public final class HideCommands
     final Logger logger = super.getLogger();
     final Version version = MinecraftVersionCreator.getMinecraftVersion();
 
-    //
-    //
     if (version.isOlderThan(1_007_000)) {
-      logger.severe("");
-      logger.severe("");
-      logger.severe("");
-      logger.severe("");
-      logger.severe("");
+      logger.severe(
+        "The version of your Minecraft server is older than 1.7.2 for "
+          + "this reason also the plugin will be automatically disabled "
+          + "because such an old version is not supported."
+      );
 
       this.forceDisable = true;
       super.setEnabled(false);
+      return;
     }
 
-    //
     HideCommands.instance = this;
 
     try {
@@ -171,18 +168,20 @@ public final class HideCommands
     // Spigot platform and receiving a warning about this fact is enabled,
     // then an appropriate message will be printed to the console.
     if (!this.canUseSpigot() && this.settings.showNonSpigotWarning()) {
-      logger.warning("Detected that the plugin was not run on a platform");
-      logger.warning("that is a fork of the Spigot platform, this is");
-      logger.warning("fine but you will not be able to the full");
-      logger.warning("functionality of the plugin.");
+      logger.warning(
+        "Detected that the plugin was not run on a platform that is a "
+          + "fork of the Spigot platform, this is fine but you will not be "
+          + "able to the full functionality of the plugin."
+      );
     }
 
-    //
-    if (version.isLaterThan(1_021_000) &&
+    if (version.isLaterThan(1_016_005) &&
       this.settings.showNonSupportedNewestVersionWarning()
     ) {
-      logger.warning("");
-      logger.warning("");
+      logger.warning(
+        "Detected that your Minecraft server version is newer than "
+          + "1.16.5 therefore the plugin may not work properly."
+      );
     }
 
     this.commandMapHolder = new CommandMapHolder();
